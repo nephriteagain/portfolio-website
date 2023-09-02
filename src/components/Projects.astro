@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import type { projectData } from '../data';
+
+
+interface Props {
+    projects: projectData[]
+}
+
+const { projects } = Astro.props
+---
+<section class="max-w-[600px]">
+    <div class="text-center font-bold text-xl my-4">PROJECTS</div>
+    <div class="flex flex-row flex-wrap gap-4">
+        {projects.map(project => {
+            const { name, href, image, description } = project
+            return (
+                <div class="group bg-zinc-300 p-4 rounded-md shado-md drop-shadow-md hover:bg-gray-400 transition-all duration-200 w-[280px] flex flex-col">
+                <a href={href}
+                >
+                    <h2 class="text-center font-bold text-lg mb-2">
+                        {name}
+                    </h2>
+                    <div class="aspect-square flex items-center justify-center bg-gray-600">
+                        <Image 
+                        src={image}
+                        alt={'name'}
+                        width="250"
+                        height='250'
+                        decoding='async'
+                        loading='lazy'                                                
+                    />
+                    </div>
+                    
+                </a>
+                {description && 
+                    <p class="h-full ext-sm text-justify text p-2 shadow-lg drop-shadow-lg group-hover:bg-zinc-300 transition-all duration-200">{description}</p>
+                }
+                </div>
+            )
+        })}
+    </div>
+</section>
