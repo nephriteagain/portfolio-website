@@ -79,7 +79,14 @@ export const data : projectData[] = [
         href: '/damath-online',
         image: damathOnline,        
         github: 'https://github.com/nephriteagain/damath-online',
-        description: 'The classic filipino made educational board game now online!',
+        description: 'The classic filipino educational board game now online!',
         site: 'https://damath-online.nephriteagain.online/'
     }
+]
+
+export const technologies = [
+    'HTML/CSS', 'Javascript', 'Typescript', 'React',
+    'NodeJS',  'ExpressJS' ,'Git', 'Firebase', 'Tailwind', 'Bootstrap',
+    'Sass', 'Astro', 'NextJS', 'Framer-Motion', 'MongoDB',
+    'Redux/Redux-toolkit/RTK query'
 ]
