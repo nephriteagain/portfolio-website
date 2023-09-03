@@ -56,6 +56,7 @@ export const data : projectData[] = [
         href: '/chat-connect',
         image: chatConnect,        
         github: ['https://github.com/nephriteagain/ChatConnect'],
+        site: 'https://chatconnect.onrender.com/',
         description: 'a group chatting app',
         stack: [
             'react',
@@ -82,6 +83,7 @@ export const data : projectData[] = [
             'https://github.com/nephriteagain/quiz-client',
             'https://github.com/nephriteagain/quiz-server'
         ],
+        site: 'https://quiz-generator.nephriteagain.online/',
         description: 'Create and solve different types of quiz trivias created by users',
         stack: [
             'react',
@@ -121,5 +123,5 @@ export const technologies = [
     'HTML/CSS', 'Javascript', 'Typescript', 'React',
     'NodeJS',  'ExpressJS' ,'Git', 'Firebase', 'Tailwind', 'Bootstrap',
     'Sass', 'Astro', 'NextJS', 'Framer-Motion', 'MongoDB',
-    'Redux/Redux-toolkit/RTK query', 'Shadcn-ui'
+    'Redux/Redux-toolkit/RTK query', 'Shadcn-ui', 'Rest API'
 ]
