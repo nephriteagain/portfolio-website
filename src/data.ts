@@ -10,10 +10,10 @@ export type projectData = {
     features: string[];
     href: string;
     image: ImageMetadata;
-    github: string;
+    github: string[];
     description: string;
+    stack: string[]
     site?: string;
-    stack?: string[]
 }
 
 export const data : projectData[] = [
@@ -29,9 +29,15 @@ export const data : projectData[] = [
         ],
         href: '/test-generator',
         image: testGenerator,        
-        github: 'https://github.com/nephriteagain/test-generator',
+        github: ['https://github.com/nephriteagain/test-generator'],
         site: 'https://testtodocx.nephriteagain.online/',
-        description: 'a test generator site that helps user speed up creating test using predefined templates and converts it to a docx file'
+        description: 'a test generator site that helps user speed up creating test using predefined templates and converts it to a docx file',
+        stack: [
+            'nextjs',
+            'typescript',
+            'tailwindcss',
+            'docx',
+        ]
     },
     {
         id: 'chat-connect',
@@ -49,8 +55,14 @@ export const data : projectData[] = [
         ],
         href: '/chat-connect',
         image: chatConnect,        
-        github: 'https://github.com/nephriteagain/ChatConnect',
+        github: ['https://github.com/nephriteagain/ChatConnect'],
         description: 'a group chatting app',
+        stack: [
+            'react',
+            'typescript',
+            'tailwindcss',
+            'firebase'
+        ]
     },
     {
         id: 'quiz-generator',
@@ -65,8 +77,21 @@ export const data : projectData[] = [
         ],
         href: '/quiz-generator',
         image: quizGenerator,        
-        github: 'https://github.com/nephriteagain/quiz-generator-client',
-        description: 'Create and solve different types of quiz trivias created by users'
+        github: 
+        [
+            'https://github.com/nephriteagain/quiz-client',
+            'https://github.com/nephriteagain/quiz-server'
+        ],
+        description: 'Create and solve different types of quiz trivias created by users',
+        stack: [
+            'react',
+            'react-router-dom',
+            'axios',
+            'tailwindcss',
+            'mongodb',
+            'expressjs',
+            'nodemailer'
+        ]
     },{
         id: 'damath-online',
         name: 'Damath Online',
@@ -78,9 +103,17 @@ export const data : projectData[] = [
         ],
         href: '/damath-online',
         image: damathOnline,        
-        github: 'https://github.com/nephriteagain/damath-online',
+        github: ['https://github.com/nephriteagain/damath-online'],
         description: 'The classic filipino educational board game now online!',
-        site: 'https://damath-online.nephriteagain.online/'
+        site: 'https://damath-online.nephriteagain.online/',
+        stack: [
+            'nextjs',
+            'typescript',
+            'firebase',
+            'redux-toolkit',
+            'shadcn/ui',
+            'tailwindcss',
+        ]
     }
 ]
 
