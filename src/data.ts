@@ -124,5 +124,5 @@ export const technologies = [
     'HTML/CSS', 'Javascript', 'Typescript', 'React',
     'NodeJS',  'ExpressJS' ,'Git', 'Firebase', 'Tailwind', 'Bootstrap',
     'Sass', 'Astro', 'NextJS', 'Framer-Motion', 'MongoDB',
-    'Redux/Redux-toolkit/RTK query', 'Shadcn-ui', 'Rest API'
+    'Redux/Redux-toolkit/RTK query', 'Shadcn-ui', 'Rest API', 'SQL'
 ]
