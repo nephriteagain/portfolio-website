@@ -102,6 +102,7 @@ export const data : projectData[] = [
             'choose different game modes',
             'request game restart while in-game',
             'request game change mode while in-game',
+            'spectate live matches'
         ],
         href: '/damath-online',
         image: damathOnline,        
