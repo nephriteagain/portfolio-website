@@ -23,8 +23,8 @@ if (!currentProject) {
 const { name, features, image, github, site, id, description, stack } = currentProject
 ---
 <Layout title={name}>
-<div transition:name={id} class="max-w-[500px] bg-primary p-6 shadow-lg drop-shadow-lg mt-8">
-    <h1 class="flex flex-row relative items-center justify-center gap-2 mb-4">
+<div transition:name={id} class="w-[90%] max-w-[500px] bg-primary p-6 shadow-lg drop-shadow-lg mt-8 rounded-xl">
+    <h1 class=" mx-auto bg-secondary w-fit px-4 py-1 rounded-full flex flex-row relative items-center justify-center gap-2 mb-4 shadow-md drop-shadow-sm">
         <span class="text-2xl font-bold">{name}</span>
         {github.map(g => {
             return ( <a href={g} target="_blank" class="hover:scale-105 active:scale-100 hover:drop-shadow-md transition-all duration-150">
@@ -46,7 +46,7 @@ const { name, features, image, github, site, id, description, stack } = currentP
         loading='lazy'
         class='shadow-lg drop-shadow-lg mx-auto'
     /></a>
-    <div class="my-4">
+    <div class="my-4 select-none">
         <div class="flex flex-row flex-wrap justify-center gap-2">
             {stack.map(s => {
                 return (
