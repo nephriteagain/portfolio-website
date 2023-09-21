@@ -9,32 +9,29 @@ interface Props {
 
 const { projects } = Astro.props
 ---
-<section class="max-w-[600px]" id="projects">
-    <div class="text-center font-bold text-xl my-4">PROJECTS</div>
-    <div class="flex flex-row flex-wrap gap-4 justify-center">
+<section class="w-full max-w-[800px]" id="projects">
+    <div class="text-white text-center font-bold text-2xl my-4 tracking-widest">PROJECTS</div>
+    <div class="flex flex-row flex-wrap  justify-center">
         {projects.map(project => {
             const { name, href, image, description, id } = project
             return (
-            <div transition:name={id} class="group bg-zinc-300 p-4 rounded-md shado-md drop-shadow-md hover:bg-gray-400 transition-all duration-200 w-[280px] flex flex-col">
+            <div transition:name={id} class="group bg-secondary p-4 m-3 rounded-md shado-md drop-shadow-md hover:bg-primary transition-all duration-200 w-[90%] sm:w-[46%] min-w-[300px] flex flex-col">
                 <a href={href}
                 >
                     <h2 class="text-center font-bold text-lg mb-2">
                         {name}
                     </h2>
-                    <div class="aspect-square flex items-center justify-center bg-gray-600">
                         <Image 
+                        class='shadow-md drop-shadow-md'
                         src={image}
                         alt={'name'}
-                        width="250"
-                        height='250'
                         decoding='async'
                         loading='lazy'                                                
                     />
-                    </div>
                     
                 </a>
                 {description && 
-                    <p class="h-full ext-sm text-justify text p-2 shadow-lg drop-shadow-lg group-hover:bg-zinc-300 transition-all duration-200">{description}</p>
+                    <p class="bg-primary h-full ext-sm text-justify text p-2 shadow-lg drop-shadow-lg group-hover:bg-secondary transition-all duration-200">{description}</p>
                 }
                 </div>
             )
