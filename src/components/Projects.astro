@@ -10,7 +10,7 @@ interface Props {
 const { projects } = Astro.props
 ---
 <section class="w-full max-w-[800px]" id="projects">
-    <div class="text-white text-center font-bold text-2xl my-4 tracking-widest">PROJECTS</div>
+    <div class="text-white text-center font-bold text-2xl my-4 tracking-widest dro-shadow-lg">PROJECTS</div>
     <div class="flex flex-row flex-wrap  justify-center">
         {projects.map(project => {
             const { name, href, image, description, id } = project
