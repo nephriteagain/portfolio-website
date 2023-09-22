@@ -56,7 +56,7 @@ export const data : projectData[] = [
         href: '/chat-connect',
         image: chatConnect,        
         github: ['https://github.com/nephriteagain/ChatConnect'],
-        site: 'https://chatconnect.onrender.com/',
+        site: 'https://chat-connect.nephriteagain.online/',
         description: 'a group chatting app',
         stack: [
             'react',
