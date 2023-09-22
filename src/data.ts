@@ -62,7 +62,8 @@ export const data : projectData[] = [
             'react',
             'typescript',
             'tailwindcss',
-            'firebase'
+            'firebase',
+            'framer-motion
         ]
     },
     {
