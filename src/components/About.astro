@@ -10,7 +10,7 @@ import { technologies } from "../data";
     <div class="flex flex-row flex-wrap gap-2 justify-between">
         {technologies.map(t => {
             return (
-                <div class="text-lg sm:text-base font-bold odd:bg-blue-600 even:bg-red-600 text-white shadow-md drop-shadow-md px-3 py-1 rounded-md border-4 border-transparent odd:hover:border-blue-600 hover:bg-white hover:text-black even:hover:border-red-600 transition-all duration-150">
+                <div class="text-lg sm:text-base font-bold odd:bg-background odd:text-primary even:bg-primary  even:text-dark shadow-md drop-shadow-md px-3 py-1 rounded-md border-4 border-transparent hover:odd:bg-primary hover:odd:text-dark hover:even:bg-background hover:even:text-primary transition-all duration-150">
                     {t}
                 </div>
             )

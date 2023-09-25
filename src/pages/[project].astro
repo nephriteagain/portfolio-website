@@ -50,7 +50,7 @@ const { name, features, image, github, site, id, description, stack } = currentP
         <div class="flex flex-row flex-wrap justify-center gap-2">
             {stack.map(s => {
                 return (
-                    <div class="text-lg sm:text-base odd:bg-blue-600 even:bg-red-600 text-white px-2 py-1 rounded-md shadow-md drop-shadow-md border-transparent border-2 hover:white hover:odd:border-blue-600 hover:even:border-red-600 hover:bg-white hover:text-black">
+                    <div class="text-lg sm:text-base odd:bg-background odd:text-primary even:bg-secondary even:text-dark px-2 py-1 rounded-md shadow-md drop-shadow-md border-transparent hover:odd:bg-secondary hover:odd:text-dark hover:even:bg-background hover:even:text-primary transition-all duration-150">
                         {s}
                     </div>
                 )
