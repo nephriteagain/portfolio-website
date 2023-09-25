@@ -50,7 +50,7 @@ const { name, features, image, github, site, id, description, stack } = currentP
         <div class="flex flex-row flex-wrap justify-center gap-2">
             {stack.map(s => {
                 return (
-                    <div class="odd:bg-blue-600 even:bg-red-600 text-white px-2 py-1 rounded-md shadow-md drop-shadow-md border-transparent border-2 hover:white hover:odd:border-blue-600 hover:even:border-red-600 hover:bg-white hover:text-black">
+                    <div class="text-lg sm:text-base odd:bg-blue-600 even:bg-red-600 text-white px-2 py-1 rounded-md shadow-md drop-shadow-md border-transparent border-2 hover:white hover:odd:border-blue-600 hover:even:border-red-600 hover:bg-white hover:text-black">
                         {s}
                     </div>
                 )
@@ -58,9 +58,9 @@ const { name, features, image, github, site, id, description, stack } = currentP
         </div>
     </div>
     <div class="my-4">
-        <p class="text-center my-2 opacity-80 text-sm">{description}</p>
+        <p class="text-center my-2 opacity-80 text-xl sm:text-sm">{description}</p>
         <h2 class="font-semibold text-xl">features</h2>
-        <ul>
+        <ul class="text-xl sm:text-base">
             {features.map(f => {
                 return (
                     <li>{f}</li>
@@ -69,10 +69,19 @@ const { name, features, image, github, site, id, description, stack } = currentP
         </ul>
     </div>
     <div class="flex">
-        <a href="/" class="text-lg text-gray-700 mx-auto border-b-2 border-black hover:border-green-600 hover:scale-105 active:scale-100 transition-all duration-150">
+        <a href="/" id="to-home" class=" text-xl sm:text-lg text-gray-700 mx-auto border-b-2 border-black hover:border-green-600 hover:scale-105 active:scale-100 transition-all duration-150">
             back to home
         </a>
     </div>
     
 </div>
 </Layout>
+
+<script>
+    window.addEventListener('click', e => {        
+        if (e.target === document.body) {
+            const toHomeEl = document.getElementById('to-home')
+            toHomeEl?.click()
+        }
+    })
+</script>
