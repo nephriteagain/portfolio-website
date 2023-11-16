@@ -1,6 +1,5 @@
-import image from './images/test.png'
 import testGenerator from './images/test-generator.png'
-import chatConnect from './images/chat-connect.png'
+import chatConnect from './images/chat-connect-v2.png'
 import quizGenerator from './images/quiz-generator.png'
 import damathOnline from './images/damath-online.png'
 
@@ -55,11 +54,11 @@ export const data : projectData[] = [
         ],
         href: '/chat-connect',
         image: chatConnect,        
-        github: ['https://github.com/nephriteagain/ChatConnect'],
-        site: 'https://chat-connect.nephriteagain.online/',
+        github: ['https://github.com/nephriteagain/chat-connect-v2'],
+        site: 'https://chat-connect-v2.vercel.app/',
         description: 'a group chatting app',
         stack: [
-            'react',
+            'nextjs',
             'typescript',
             'tailwindcss',
             'firebase',
