@@ -86,7 +86,7 @@ export const data : projectData[] = [
             'https://github.com/nephriteagain/quiz-client',
             'https://github.com/nephriteagain/quiz-server'
         ],
-        site: 'https://quiz-generator.nephriteagain.online/',
+        site: 'https://quizzle-createandsolvequizzes.onrender.com/',
         description: 'Create and solve different types of quiz trivias created by users',
         stack: [
             'react',
