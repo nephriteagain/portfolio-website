@@ -16,28 +16,7 @@ export type projectData = {
 }
 
 export const data : projectData[] = [
-    {
-        id: 'test-generator',
-        name: 'Test Generator',
-        features: [
-            'create different types of test using templates',
-            'converts test created into a docx file',
-            'undo action functionality',
-            'hotkey embedded',
-            'localstorage, saves your work automatically',         
-        ],
-        href: '/test-generator',
-        image: testGenerator,        
-        github: ['https://github.com/nephriteagain/test-generator'],
-        site: 'https://testtodocx.nephriteagain.online/',
-        description: 'a test generator site that helps user speed up creating test using predefined templates and converts it to a docx file',
-        stack: [
-            'nextjs',
-            'typescript',
-            'tailwindcss',
-            'docx',
-        ]
-    },
+    
     {
         id: 'chat-connect',
         name: 'ChatConnect',
@@ -66,6 +45,31 @@ export const data : projectData[] = [
             'tailwindcss',
             'firebase',
             'framer-motion'
+        ]
+    },    
+    
+    {
+        id: 'damath-online',
+        name: 'Damath Online',
+        features: [
+            'create and join lobby',            
+            'choose different game modes',
+            'request game restart while in-game',
+            'request game change mode while in-game',
+            'spectate live matches'
+        ],
+        href: '/damath-online',
+        image: damathOnline,        
+        github: ['https://github.com/nephriteagain/convex-damath'],
+        description: 'The classic filipino educational board game now online!',
+        site: 'https://online-damath.vercel.app/',
+        stack: [
+            'nextjs',
+            'typescript',
+            'convex',
+            'redux-toolkit',
+            'shadcn/ui',
+            'tailwindcss',
         ]
     },
     {
@@ -97,30 +101,29 @@ export const data : projectData[] = [
             'expressjs',
             'nodemailer'
         ]
-    },{
-        id: 'damath-online',
-        name: 'Damath Online',
+    },
+    {
+        id: 'test-generator',
+        name: 'Test Generator',
         features: [
-            'create and join lobby',            
-            'choose different game modes',
-            'request game restart while in-game',
-            'request game change mode while in-game',
-            'spectate live matches'
+            'create different types of test using templates',
+            'converts test created into a docx file',
+            'undo action functionality',
+            'hotkey embedded',
+            'localstorage, saves your work automatically',         
         ],
-        href: '/damath-online',
-        image: damathOnline,        
-        github: ['https://github.com/nephriteagain/convex-damath'],
-        description: 'The classic filipino educational board game now online!',
-        site: 'https://online-damath.vercel.app/',
+        href: '/test-generator',
+        image: testGenerator,        
+        github: ['https://github.com/nephriteagain/test-generator'],
+        site: 'https://testtodocx.nephriteagain.online/',
+        description: 'a test generator site that helps user speed up creating test using predefined templates and converts it to a docx file',
         stack: [
             'nextjs',
             'typescript',
-            'convex',
-            'redux-toolkit',
-            'shadcn/ui',
             'tailwindcss',
+            'docx',
         ]
-    }
+    },
 ]
 
 export const technologies = [
