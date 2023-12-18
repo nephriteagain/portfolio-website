@@ -82,6 +82,7 @@ export const data : projectData[] = [
             'password reset via email',
             'pagination',
             'search filters',
+            'rate limiting'
         ],
         href: '/quiz-generator',
         image: quizGenerator,        
@@ -110,7 +111,7 @@ export const data : projectData[] = [
             'converts test created into a docx file',
             'undo action functionality',
             'hotkey embedded',
-            'localstorage, saves your work automatically',         
+            'localstorage, saves your work automatically',
         ],
         href: '/test-generator',
         image: testGenerator,        
