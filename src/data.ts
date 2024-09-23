@@ -116,7 +116,7 @@ export const data : projectData[] = [
         href: '/test-generator',
         image: testGenerator,        
         github: ['https://github.com/nephriteagain/test-generator'],
-        site: 'https://testtodocx.nephriteagain.online/',
+        site: 'https://testtodocx.vercel.app/',
         description: 'a test generator site that helps user speed up creating test using predefined templates and converts it to a docx file',
         stack: [
             'nextjs',
@@ -128,8 +128,29 @@ export const data : projectData[] = [
 ]
 
 export const technologies = [
-    'HTML/CSS', 'Javascript', 'Typescript', 'React',
-    'NodeJS',  'ExpressJS' ,'Git', 'Firebase', 'Tailwind', 'Bootstrap',
-    'Sass', 'Astro', 'NextJS', 'Framer-Motion', 'MongoDB',
-    'Redux/Redux-toolkit/RTK query', 'Shadcn-ui', 'Rest API', 'SQL'
-]
+    { name: 'HTML/CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+    { name: 'Javascript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+    { name: 'Typescript', url: 'https://www.typescriptlang.org/' },
+    { name: 'React', url: 'https://reactjs.org/' },
+    { name: 'NodeJS', url: 'https://nodejs.org/' },
+    { name: 'ExpressJS', url: 'https://expressjs.com/' },
+    { name: 'Git', url: 'https://git-scm.com/' },
+    { name: 'Firebase', url: 'https://firebase.google.com/' },
+    { name: 'Tailwind', url: 'https://tailwindcss.com/' },
+    { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
+    { name: 'Sass', url: 'https://sass-lang.com/' },
+    { name: 'Astro', url: 'https://astro.build/' },
+    { name: 'NextJS', url: 'https://nextjs.org/' },
+    { name: 'Framer-Motion', url: 'https://www.framer.com/motion/' },
+    { name: 'MongoDB', url: 'https://www.mongodb.com/' },
+    { name: 'Redux/Redux-toolkit/RTK query', url: 'https://redux-toolkit.js.org/' },
+    { name: 'Shadcn-ui', url: 'https://ui.shadcn.com/' },
+    { name: 'Rest API', url: 'https://restfulapi.net/' },
+    { name: 'SQL', url: 'https://www.w3schools.com/sql/' },
+    { name: 'React Native', url: 'https://reactnative.dev/' },
+    { name: 'Expo', url: 'https://expo.dev/' },
+    { name: 'Supabase', url: 'https://supabase.com/' },
+    { name: 'Remix', url: 'https://remix.run/'},
+    { name: 'Vue', url: 'https://vuejs.org/'}
+  ];
+  
