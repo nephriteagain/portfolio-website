@@ -1,17 +1,120 @@
 
+---
+import Layout from '../layouts/Layout.astro';
+---
 
-<!DOCTYPE>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-		<meta name="description" content="nephriteagain portfolio projects">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>not found...</title>
-    </head>        
-    <body>
-        <h1>page not found...</h1>
-        <a href="/">return to home</a>
-    </body>
-</html>
+<Layout title="Page Not Found - Jade Barry Lazo">
+    <!-- Navigation -->
+    <nav class="z-20 fixed flex flex-row text-lg bg-background/90 backdrop-blur-sm w-full border-b border-border shadow-lg gap-6 px-6 py-4">
+        <a href="/" class="text-text hover:text-accent transition-all duration-200">
+            ← Back to Portfolio
+        </a>
+        <div class="flex gap-4 ms-auto">
+            <a href="/#projects" class="text-text hover:text-accent transition-all duration-200">
+                Projects
+            </a>
+            <a href="/#about" class="text-text hover:text-accent transition-all duration-200">
+                About
+            </a>
+            <a href="/#contact" class="text-text hover:text-accent transition-all duration-200">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-20 pb-16">
+        <!-- 404 Hero Section -->
+        <section class="min-h-screen flex flex-col items-center justify-center text-center px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Large 404 -->
+                <div class="mb-8">
+                    <h1 class="text-8xl md:text-9xl font-bold text-accent/30 mb-4 select-none">
+                        404
+                    </h1>
+                </div>
+
+                <!-- Error Message -->
+                <div class="mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold text-text mb-6">
+                        Page Not Found
+                    </h2>
+                    <p class="text-xl text-text-muted mb-8 leading-relaxed max-w-2xl mx-auto">
+                        Oops! The page you're looking for seems to have wandered off into the digital void. 
+                        But don't worry - let's get you back on track.
+                    </p>
+                </div>
+
+                <!-- Suggestions -->
+                <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
+                    <div class="bg-secondary/5 border border-border rounded-lg p-6 hover:border-accent transition-all duration-200">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2V7zm6 4v8m4-8v8"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text mb-2">View My Projects</h3>
+                        <p class="text-text-muted text-sm">Check out my latest work and applications</p>
+                    </div>
+
+                    <div class="bg-secondary/5 border border-border rounded-lg p-6 hover:border-accent transition-all duration-200">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text mb-2">About Me</h3>
+                        <p class="text-text-muted text-sm">Learn about my background and experience</p>
+                    </div>
+
+                    <div class="bg-secondary/5 border border-border rounded-lg p-6 hover:border-accent transition-all duration-200">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text mb-2">Get In Touch</h3>
+                        <p class="text-text-muted text-sm">Let's discuss your next project</p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/" class="bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 inline-flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                        Go Home
+                    </a>
+                    <a href="/#projects" class="border border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                        View Projects
+                    </a>
+                </div>
+
+                <!-- Fun Error Code -->
+                <div class="mt-16 text-center">
+                    <p class="text-text-muted text-sm">
+                        Error Code: <span class="font-mono text-accent">PORTFOLIO_PAGE_NOT_FOUND_404</span>
+                    </p>
+                    <p class="text-text-muted text-xs mt-2">
+                        "The best error pages are the ones you never have to see" - Anonymous Developer
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    /* Add some subtle animation to the 404 number */
+    h1 {
+        animation: pulse 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes pulse {
+        0% { opacity: 0.3; }
+        100% { opacity: 0.5; }
+    }
+</style>

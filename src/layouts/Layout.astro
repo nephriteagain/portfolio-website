@@ -1,6 +1,6 @@
 --- 
-import { ViewTransitions } from 'astro:transitions';
 import Head from '../components/Head.astro';
+import '../styles/global.css';
 interface Props {
 	title: string;
 }
@@ -17,12 +17,13 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions />
 		<Head />
 	</head>
 	<body class="body flex flex-col items-center bg-background">
 		<slot />
-		<p class="fixed bottom-2 right-2 opacity-30  text-lg sm:text-sm italic">made with astro 3.0</p>	
+		<footer class="w-full text-center py-8 text-text-muted">
+			<p>&copy; 2025 Jade Lazo. Built with Astro & Tailwind CSS</p>
+		</footer>	
 	</body>
 </html>
 

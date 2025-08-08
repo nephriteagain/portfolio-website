@@ -2,37 +2,84 @@
 import { Image } from 'astro:assets';
 import type { projectData } from '../data';
 
-
 interface Props {
     projects: projectData[]
 }
 
 const { projects } = Astro.props
 ---
-<section class="w-full max-w-[800px]" id="projects">
-    <div class="text-white text-center font-bold text-2xl my-4 tracking-widest dro-shadow-lg">PROJECTS</div>
-    <div class="flex flex-row flex-wrap  justify-center">
+<section class="w-full max-w-6xl mx-auto px-4 py-20" id="projects">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-text mb-6">Featured Projects</h2>
+        <div class="w-20 h-1 bg-accent mx-auto mb-8"></div>
+        <p class="text-xl text-text-muted max-w-2xl mx-auto">
+            A showcase of my recent work, featuring full-stack applications built with modern technologies
+        </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map(project => {
-            const { name, href, image, description, id } = project
+            const { name, href, image, description, id, stack, site, github } = project
             return (
-            <div transition:name={id} class="group bg-secondary p-4 m-3 rounded-xl shado-md drop-shadow-md hover:bg-primary transition-all duration-200 w-[90%] sm:w-[46%] min-w-[300px] flex flex-col">
-                <a href={href}
-                >
-                    <h2 class="text-center font-bold  text-2xl sm:text-lg mb-2">
-                        {name}
-                    </h2>
-                        <Image 
-                        class='shadow-md drop-shadow-md'
-                        src={image}
-                        alt={'name'}
-                        decoding='async'
-                        loading='lazy'                                                
-                    />
+                <div transition:name={id} class="group bg-secondary/5 border border-border rounded-xl overflow-hidden hover:border-accent transition-all duration-300 hover:shadow-xl">
+                    <a href={href} class="block">
+                        <div class="relative overflow-hidden">
+                            <Image 
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                src={image}
+                                alt={name}
+                                decoding="async"
+                                loading="lazy"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </a>
                     
-                </a>
-                {description && 
-                    <p class="bg-primary h-full text-xl sm:text-base text-justify text p-2 shadow-lg drop-shadow-lg group-hover:bg-secondary transition-all duration-200">{description}</p>
-                }
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-text group-hover:text-accent transition-colors duration-200">
+                                {name}
+                            </h3>
+                            <div class="flex gap-2">
+                                {site && (
+                                    <a href={site} target="_blank" class="text-text-muted hover:text-accent transition-colors duration-200">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </a>
+                                )}
+                                {github.length > 0 && (
+                                    <a href={github[0]} target="_blank" class="text-text-muted hover:text-accent transition-colors duration-200">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/>
+                                        </svg>
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+                        
+                        <p class="text-text-muted mb-4 line-clamp-2">{description}</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            {stack.slice(0, 4).map(tech => (
+                                <span class="px-2 py-1 text-xs font-medium bg-accent/20 text-accent rounded-md">
+                                    {tech}
+                                </span>
+                            ))}
+                            {stack.length > 4 && (
+                                <span class="px-2 py-1 text-xs font-medium text-text-muted">
+                                    +{stack.length - 4} more
+                                </span>
+                            )}
+                        </div>
+                        
+                        <a href={href} class="inline-flex items-center text-accent hover:text-accent-hover font-medium transition-colors duration-200">
+                            Learn more
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             )
         })}
